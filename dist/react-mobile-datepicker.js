@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react'), require('react-dom')) :
         typeof define === 'function' && define.amd ? define(['react', 'react-dom'], factory) :
-            (global.$npm_package_amdName = factory(global.React,global.ReactDOM));
+            (global.reactMobileDatePicker = factory(global.React,global.ReactDOM));
 }(this, (function (React,ReactDOM) { 'use strict';
 
     function __$styleInject(css, ref) {
@@ -707,7 +707,7 @@
 
                 // 检测是否更新日期列表
                 if (this._checkIsUpdateDates(direction, translateY)) {
-                    this.moveDateCount = direction >= 0 ? this.moveDateCount + 1 : this.moveDateCount - 1;
+                    this.moveDateCount = direction > 0 ? this.moveDateCount + 1 : this.moveDateCount - 1;
                     this._updateDates(direction);
                 }
 
@@ -1258,4 +1258,4 @@
     return ModalDatePicker;
 
 })));
-//# sourceMappingURL=$npm_package_main.map
+//# sourceMappingURL=react-mobile-datepicker.js.map
