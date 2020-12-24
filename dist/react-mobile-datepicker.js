@@ -149,7 +149,6 @@
         var index = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         var relative = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
-        console.log(relative);
         throwIfInvalidDate(now);
         if (!relative) {
             return new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), (now.getSeconds() + 60 + index) % 60);
